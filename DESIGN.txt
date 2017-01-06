@@ -1,0 +1,21 @@
+Spyfall by Arpita Abrol, Anthony Zeng
+
+Description: 
+Spyfall is a party game where, at the start of every round, every player is given a card from a certain location with a role on it, except one player who is given a Spy card. The goal of the game is for the Spy to determine which location all the other players are located at, or for the other players to determine which player is the Spy. During each round, players ask each other questions and their answers are used to help determine who the spy is or where the location is. 
+
+UI: 
+Each player will be told the location and their role or told that they are the Spy. If possible, we will show a map of all possible locations to each player along with their role card. The core functionality of the game will be a messaging system so that the players can ask each other questions and answer.
+
+Technical Design:
+    Networking: All players will connect at the beginning of each round
+    Semaphores: Used to keep stack of who is asking/answering
+    Pipes: Used for the messaging system
+    Working with files: Used for graphics and possibly for game information (cards, locations, etc.)
+    Data Structures and Algorithms: Most of them will be related to the networking and messaging. 
+    Responsibility: Right now, it's difficult to determine the full scope of the project, so we will work on allocating work as we progress
+    
+    Timeline: 
+        Jan 06 - Design
+	Jan 12 - Initial Prototype - messaging, role allocation complete
+	Jan 15 - Networking complete
+	Jan 22 - Completed projet - minor bug fixes
