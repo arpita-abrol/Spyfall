@@ -3,7 +3,7 @@ DW: APPROVED
 ============================
 
 
-Spyfall by Arpita Abrol, Anthony Zeng
+Spyfall by Arpita Abrol, Anthony Zeng, Nicholas Adit
 
 Description: 
 Spyfall is a party game where, at the start of every round, every player is given a card from a certain location with a role on it, except one player who is given a Spy card. The goal of the game is for the Spy to determine which location all the other players are located at, or for the other players to determine which player is the Spy. During each round, players ask each other questions and their answers are used to help determine who the spy is or where the location is. 
