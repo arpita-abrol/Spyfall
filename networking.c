@@ -52,7 +52,7 @@ int server_connect(int sd) {
 }
 
 
-int client_connect( char *host ) {
+int client_connect( char *host, char *username ) {
   int sd, i;
   
   sd = socket( AF_INET, SOCK_STREAM, 0 );
@@ -63,7 +63,7 @@ int client_connect( char *host ) {
   inet_aton( host, &(sock.sin_addr));
   sock.sin_port = htons(9001);
   
-  printf("[client] connecting to: %s\n", host );
+  printf("[&s] connecting to: %s\n", username, host );
   i = connect( sd, (struct sockaddr *)&sock, sizeof(sock) );
   error_check( i, "client");
   

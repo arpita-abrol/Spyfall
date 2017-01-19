@@ -9,9 +9,48 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+#include <ctype.h>
+
 #include "networking.h"
 
+//checks to make sure username is 5-15 chars and alphanumeric(a-z, A-Z, 0-9)
+int check_username( char* username ) {
+  int i = 0;
+  char c[1];
+  if( strlen(username) > 15 || strlen(username) < 5) {
+    return 0;
+  }
+  for( ; i < strlen(username); i++ ) {
+    strncpy(c, &username[i], 1);
+    printf("%s\n",c);;
+    if( isalnum((int)c) != 0) {
+      return 0;
+    }
+  }  return 1;
+}
+
+
 int main( int argc, char *argv[] ) {
+  
+  /*-----------------------------------------------
+      Choose username
+  -----------------------------------------------*/
+  char buffer[MESSAGE_BUFFER_SIZE]; //buffer for messages
+  short check = 0;
+  char username[16];
+  
+  printf("Welcome to Spyfall.\n");
+  //get username from person. check for alphanumeric and size. check for usage by others
+  while( !check ) {
+    printf("Please choose your username. Usernames can only be composed of alphanumeric characters and have between 5 and 15 characters.\n");
+    fgets( buffer, sizeof(buffer), stdin );
+    buffer[strcspn(buffer, "\n")] = 0;
+    strcpy(username, buffer);
+    check = check_username(username);
+  }
+  printf("Welcome, %s\n", username);
+  
+  //check if first player
 
   /*-----------------------------------------------
       Connecting to Server
@@ -27,25 +66,8 @@ int main( int argc, char *argv[] ) {
   
   int sd;
 
-  sd = client_connect( host );
-  
-  /*-----------------------------------------------
-      Choose username
-  -----------------------------------------------*/
-  char buffer[MESSAGE_BUFFER_SIZE]; //buffer for messages
-  short check = 0;
-  
-  char *username[16];
-  printf("Welcome to Spyfall. Please choose your username. Usernames can only be composed of alphanumeric characters and have between 5 and 15 characters.\n");
-  //get username from person. check for alphanumeric and size. check for usage by others
-  fgets( buffer, sizeof(buffer), stdin );
-  while( !check ) {
-    check = 1;
-  }
-  *username = strchr(buffer, '\n');
-  printf("Welcome, %s\n", *username);
-  
-  //check if first
+  sd = client_connect( host, username );
+
   /*-----------------------------------------------
       Send messages to server
   -----------------------------------------------*/ 
@@ -55,7 +77,7 @@ int main( int argc, char *argv[] ) {
     fgets( buffer, sizeof(buffer), stdin );
     char *p = strchr(buffer, '\n');
     *p = 0;
-  
+
     write( sd, buffer, sizeof(buffer) );
     read( sd, buffer, sizeof(buffer) );
     printf( "received: %s\n", buffer );

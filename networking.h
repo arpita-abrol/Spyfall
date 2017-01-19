@@ -8,6 +8,6 @@ void error_check( int i, char *s );
 int server_setup();
 int server_connect(int sd);
 
-int client_connect( char *host );
+int client_connect( char *host, char *username );
 
 #endif
