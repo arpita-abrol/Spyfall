@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+int ctr = 0;
 
 void error_check( int i, char *s ) {
   if ( i < 0 ) {
@@ -54,6 +55,9 @@ int server_connect(int sd) {
 
 
 int client_connect( char *host, char *username ) {
+
+  
+
   int sd, i;
   
   sd = socket( AF_INET, SOCK_STREAM, 0 );
