@@ -22,11 +22,11 @@ int check_username( char* username ) {
   }
   for( ; i < strlen(username); i++ ) {
     strncpy(c, &username[i], 1);
-    printf("%s\n",c);;
     if( isalnum((int)c) != 0) {
       return 0;
     }
-  }  return 1;
+  }  
+  return 1;
 }
 
 

@@ -11,16 +11,17 @@
 
 #include "networking.h"
 
+
 void process( char * s );
 void sub_server( int sd );
 
 int players = 0;
 int player_ids[5];
+char *user;
 
 int main() {
 
   int sd, connection;
-
   sd = server_setup();
     
   while (players < 5) {
@@ -44,15 +45,13 @@ int main() {
   return 0;
 }
 
-
 void sub_server( int sd ) {
 
   char buffer[MESSAGE_BUFFER_SIZE];
   while (read( sd, buffer, sizeof(buffer) )) {
 
-    printf("[SERVER %d] received: %s\n", getpid(), buffer );
-    process( buffer );
-    write( sd, buffer, sizeof(buffer));    
+    printf("[%d] received: %s\n", getpid(), buffer );
+    write( sd, buffer, sizeof(buffer));
   }
   
 }
@@ -78,10 +77,3 @@ void interrogate_player(int sd) {
   read(usrid, buffer, sizeof(buffer));
 }
 
-void process( char * s ) {
-
-  while ( *s ) {
-    *s = (*s - 'a' + 13) % 26 + 'a';
-    s++;
-  }
-}

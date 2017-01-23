@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+
 void error_check( int i, char *s ) {
   if ( i < 0 ) {
     printf("%d\n", i);
@@ -63,7 +64,7 @@ int client_connect( char *host, char *username ) {
   inet_aton( host, &(sock.sin_addr));
   sock.sin_port = htons(9001);
   
-  printf("[&s] connecting to: %s\n", username, host );
+  printf("Connecting to: %s\n", host );
   i = connect( sd, (struct sockaddr *)&sock, sizeof(sock) );
   error_check( i, "client");
   
