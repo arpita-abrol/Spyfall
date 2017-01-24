@@ -124,6 +124,7 @@ void select_username() {
 /*
  * Create shared memory for game status
  */
+/*
 void create_status_memory() {
   char c;
   int shmid;
@@ -144,10 +145,12 @@ void create_status_memory() {
         exit(1);
     }
  }
+*/
 
 /*
  * Access shared memory for game status
  */
+/*
 void access_status_memory() {
   char c;
   int shmid;
@@ -171,6 +174,7 @@ void access_status_memory() {
   //Read from shared memory
   printf("%s\n", s);
 }
+*/
 
 /*
  * Manages communications between client and server
