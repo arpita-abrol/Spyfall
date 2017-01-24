@@ -36,38 +36,7 @@ int main() {
   int sd, connection;
   sd = server_setup();
 
-    
-  /*****************Create shared memory*******************/
-   char c;
-  int shmid;
-  key_t key;
-  char*shm, *s;
-
-  key = 694;
-
-  //Create shared memory segment
-  if ((shmid = shmget(key, 1000, IPC_CREAT | 0666)) < 0) {
-        perror("shmget");
-        exit(1);
-  }
-
-  //Attach shared memory
-  if ((shm = shmat(shmid, NULL, 0)) == (char *) -1) {
-        perror("shmat");
-        exit(1);
-    }
-
-  //Write to shared memory
-  s = shm;
-
-    for (c = 'a'; c <= 'z'; c++)
-        *s++ = c;
-    *s = (char) NULL;
-    
-  /*******************************************************/
-    
-    
-  while (NUM_PLAYERS < 8) {
+    while (NUM_PLAYERS < 8) {
 
     connection = server_connect( sd );
     PLAYERS[NUM_PLAYERS].usrid = connection;
@@ -92,11 +61,50 @@ int main() {
   return 0;
 }
 
+void establish_client_connection() {
+
+}
+
 void sub_server( int sd, int player_id ) {
+   char buffer[MESSAGE_BUFFER_SIZE];
+   read(sd, PLAYERS[player_id].username, USERNAME_SIZE);
+   //printf("%s connected", username);
+    while (read( sd, buffer, sizeof(buffer) )) {
+      printf("[SERVER %d] received: %s\n", getpid(), buffer );
+      write( sd, buffer, sizeof(buffer));    
+    }  
+}
 
+void create_shared_memory() {
+     char c;
+  int shmid;
+  key_t key;
+  char*shm, *s;
 
-  /*****************Access shared memoy*******************/
-  char c;
+  key = 694;
+
+  //Create shared memory segment
+  if ((shmid = shmget(key, 1000, IPC_CREAT | 0666)) < 0) {
+        perror("shmget");
+        exit(1);
+  }
+
+  //Attach shared memory
+  if ((shm = shmat(shmid, NULL, 0)) == (char *) -1) {
+        perror("shmat");
+        exit(1);
+    }
+
+  //Write to shared memory
+  s = shm;
+
+    for (c = 'a'; c <= 'z'; c++)
+        *s++ = c;
+    *s = (char) NULL;
+}
+
+void access_shared_memory() {
+   char c;
   int shmid;
   key_t key;
   char*shm, *s;
@@ -117,16 +125,7 @@ void sub_server( int sd, int player_id ) {
 
   //Read from shared memory
   printf("%s\n", s);
-  /*******************************************************/
- 
-  
-   char buffer[MESSAGE_BUFFER_SIZE];
-   read(sd, PLAYERS[player_id].username, USERNAME_SIZE);
-   //printf("%s connected", username);
-    while (read( sd, buffer, sizeof(buffer) )) {
-      printf("[SERVER %d] received: %s\n", getpid(), buffer );
-      write( sd, buffer, sizeof(buffer));    
-    }  
+
 }
 
 int choose_player(int sd) { 
