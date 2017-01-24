@@ -7,6 +7,15 @@ Coach Passenger
 Flight Attendant
 Co-Pilot
 Captain
+Amusement Park
+Spy
+Ride Operator
+Food Vendor
+Customer
+Nurse
+Child
+Game Vendor
+Ticket Vendor
 Bank
 Spy
 Armored Car Driver
@@ -124,6 +133,15 @@ Director
 Costume Artist
 Actor
 Producer
+Nightclub
+Spy
+Dancer
+Security
+Bartender
+DJ
+Cashier
+Attendant
+Guest
 Ocean Liner
 Spy
 Rich Passenger
@@ -241,3 +259,12 @@ Theater Vistor
 Director
 Actor
 Crewman
+Zoo
+Spy
+Animal Wrangler
+Visitor
+Vet
+Ticket Vendor
+Food Vendor
+Security
+Gift Shop Cherk

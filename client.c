@@ -261,6 +261,7 @@ void print_locations() {
 void print_jobs() {
   printf("\nJobs:\n");
   printf("Airplane: 1st Class Passenger, Air Mashal, Mechanic, Coach Passenger, Flight Attendant, Co-Pilot, Captain\n");
+  printf("Amusement Park: Ride Operator, Food Vendor, Customer, Nurse, Child, Game Vendor, Ticket Vendor\n");
   printf("Bank: Armored Car Driver, Bank Manager, Loan Consultant, Bank Robber, Customer, Security Guard, Bank Teller\n");
   printf("Beach: Beach Bartender, Kite Surfer, Lifeguard, Thief, Beach Goer, Beach Photographer, Ice Cream Man\n");
   printf("Casino: Bartender, Head of Security, Bouncer, Pit Boss, Hustler, Dealer, Gamblr\n");
@@ -274,19 +275,21 @@ void print_jobs() {
   printf("Hotel: Doorman, Security Guard, Hotel Manager, Housekeeper, Hotel Guest, Bartender, Valet\n");
   printf("Military Base: Deserter, Colonel, Medic, Solider, Sniper, Executive Officer, Tank Commander\n");
   printf("Movie Studio: Stuntman, Sound Engineer, Cameraman, Director, Costume Artist, Actor, Producer\n");
+  printf("Nightclub: Dancer, Security, Bartender, DJ, Cashier, Attendant, Guest\n");
   printf("Ocean Liner: Rich Passenger, Cook, Captain, Bartender, Musician, Waiter, Ship's Mechanic\n");
   printf("Passenger Train: Mechanic, Border Patrol, Chef, Engineer, Steward, Ticket Taker, Passenger\n");
   printf("Pirate Ship: Cook, Sailor, Slave, Cannoneer, Bound Prisoner, Cabin Boy, Pirate Captain\n");
   printf("Polar Station: Medic, Geologist, Expedition Leader, Biologist, Radioman, Hydrolohist, Meteorologist\n");
   printf("Police Station: Detective, Lawyer, Journalist, Forensic Scientist, Evidence Archivist, Patrol Officer, Criminal\n");
   printf("Restaurant: Musician, Customer, Table Busser, Host, Head Chef, Food Critic, Server\n");
-  printf("School: Teacher, Student, Principal, Security Guard, Janitor, Lunch Lady, Maintenance Man\n");
+  printf("School: Mr. DW, Student, Principal, Security Guard, Janitor, Lunch Lady, Maintenance Man\n");
   printf("Service Station: Manager, Tire Specialist, Motorcyclist, Car Owner, Car Washer, Diagnostic Tech, Auto Mechanic\n");
   printf("Space Station: Engineer, Alien, Tourist, Pilot, Mission Commander, Scientist, Doctor\n");
   printf("Submarine: Cook, Captain, Sonar Operator, Weapons Technician, Sailor, Radioman, Naviagotr\n");
   printf("Supermarket: Customer, Cashier, Butcher, Janitor, Produce Manager, Food Sample Demo, Shelf Stocker\n");
   printf("University: Graduate Student, Professor, Dean, Psychologist, Maintenance Man, Student, Advisor\n");
-  printf("Theater: Coat Check, Cue Card Prompter, Ticket Office Cashier, Theater Visitor, Director, Actor, Crewman\n\n");
+  printf("Theater: Coat Check, Cue Card Prompter, Ticket Office Cashier, Theater Visitor, Director, Actor, Crewman\n");
+  printf("Zoo: Animal Wrangler, Visitor, Vet, Ticket Vendor, Food Vendor, Security, Gift Shop Cherk\n\n");
 }
 
 
