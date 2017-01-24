@@ -1,1 +1,25 @@
-1/20 Finished the role allocation functions, needs implementation
+1/06
+Arpita
+Created design document, pushed to GitHub
+Elaborated on what Spyfall is
+
+1/16
+Arpita
+Worked on networking (client+server)
+Added initial files, began adding some gameflow features and functions
+
+1/19
+Arpita
+Added gameflow features
+Added username functionality
+
+1/20
+Nick
+Finished the role allocation functions, needs implementation
+
+1/23
+Arpita
+Code cleanup: fixed messy merges
+Added roles.c, roles.h, roles.txt. 
+Created and began to implement functions to allocate roles and choose the location
+Began work with structs to store all player information universally
