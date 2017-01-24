@@ -10,6 +10,7 @@
 
 int location;
 
+int NUM_PLAYERS = 0;
 
 void giveRole() {
 	int usedNums[NUM_PLAYERS]; 
@@ -32,7 +33,7 @@ void giveRole() {
   }
 }
 
-void getLocation() {
+int getLocation() {
 	srand(time(NULL));
 	int r = rand() % 27;
 	location = r;
@@ -45,8 +46,8 @@ void getLocation() {
 	    while (fgets(line, sizeof line, file) != NULL) {
 	        if (ctr == location) {
 	        	strtok(line, "\n");
-	        	printf("%s\n", line);
-	        	LOCATION = line;
+	        	//printf("%s\n", line);
+	        	location = line;
 	        	break;
 	        }
 	        else {
@@ -56,7 +57,8 @@ void getLocation() {
 	    fclose(file);
 	}
 
-	printf(" %d\n ", r);
+	//printf(" %d\n ", r);
+	return r;
 }
 
 void getRole( int roleNum, int player ) {

@@ -2,7 +2,7 @@
 #define ROLE_ALLOCATE
 
 	void getRole( int roleNum, int player );
-	void getLocation();
+	int getLocation();
 	void giveRole();
 
 #endif

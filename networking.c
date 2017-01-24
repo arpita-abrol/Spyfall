@@ -9,14 +9,16 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
+#include "networking.h"
+
 int ctr = 0;
 
-void error_check( int i, char *s ) {
+int error_check( int i, char *s ) {
   if ( i < 0 ) {
-    printf("%d\n", i);
-    printf("[%s] socket error %d: %s\n", s, errno, strerror(errno) );
-    exit(1);
+      printf("[%s] socket error %d: %s\n", s, errno, strerror(errno) );
+    return 1;
   }
+  return 0;
 }
 
 int server_setup() {
@@ -54,14 +56,22 @@ int server_connect(int sd) {
 }
 
 
-int client_connect( char *host, char *username ) {
+int client_connect() {
 
-  
+  int errors;
+
+  char host[20];
+
+  printf("Please enter the IP address of the server you wish to connect to: (ex. 127.0.0.1)\n");
+  fgets(host, 20, stdin);
 
   int sd, i;
   
   sd = socket( AF_INET, SOCK_STREAM, 0 );
-  error_check( sd, "client" );
+  errors = error_check( sd, "client" );
+  if (errors) {
+    return -1;
+  }
   
   struct sockaddr_in sock;
   sock.sin_family = AF_INET;
@@ -70,7 +80,10 @@ int client_connect( char *host, char *username ) {
   
   printf("Connecting to: %s\n", host );
   i = connect( sd, (struct sockaddr *)&sock, sizeof(sock) );
-  error_check( i, "client");
+  errors = error_check( i, "client");
+  if (errors) {
+    return -1;
+  }
   
   return sd;
 }
