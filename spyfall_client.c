@@ -13,6 +13,9 @@
 
 #include "networking.h"
 
+int check_username( char* username );
+void add_to_struct();
+
 //checks to make sure username is 5-15 chars and alphanumeric(a-z, A-Z, 0-9)
 int check_username( char* username ) {
   int i = 0;
@@ -27,6 +30,14 @@ int check_username( char* username ) {
     }
   }  
   return 1;
+}
+
+void add_to_struct( char* username ) {
+  int num = NUM_PLAYERS;
+  NUM_PLAYERS++;
+  PLAYERS[num].usrid = num; 
+  PLAYERS[num].usrpid = getpid();
+  strcpy(PLAYERS[num].username, username);
 }
 
 

@@ -11,14 +11,11 @@
 
 #include "networking.h"
 
-int player_ids[5];
 void sub_server(int sd, int player_id);
 void process (char *s);
 
+int player_ids[5];
 int USERNAME_SIZE;
-
-int num_players = 0;
-struct player_info players[7];
 
 int main() {
 
@@ -28,17 +25,17 @@ int main() {
   int sd, connection;
   sd = server_setup();
     
-  while (num_players < 7) {
+  while (NUM_PLAYERS < 7) {
 
     connection = server_connect( sd );
-    players[num_players].usrid = connection;
+    PLAYERS[NUM_PLAYERS].usrid = connection;
     //players++;
 
     int f = fork();
     if ( f == 0 ) {
 
       close(sd);
-      sub_server( connection, num_players );
+      sub_server( connection, NUM_PLAYERS );
       
       exit(0);
     }
@@ -51,7 +48,7 @@ int main() {
 
 void sub_server( int sd, int player_id ) {
    char buffer[MESSAGE_BUFFER_SIZE];
-   read(sd, players[player_id].username, USERNAME_SIZE);
+   read(sd, PLAYERS[player_id].username, USERNAME_SIZE);
    //printf("%s connected", username);
     while (read( sd, buffer, sizeof(buffer) )) {
       printf("[SERVER %d] received: %s\n", getpid(), buffer );

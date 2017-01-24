@@ -5,10 +5,16 @@
 
 struct player_info {
   int usrid;
+  int usrpid;
   char username[20];
   char role[30];
   int spy; 
 };
+
+int NUM_PLAYERS = 0;
+char LOCATION[];
+struct player_info PLAYERS[7];
+
 
 void error_check( int i, char *s );
 void get_user( char *username );
