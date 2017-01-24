@@ -96,3 +96,32 @@ int main( int argc, char *argv[] ) {
   
   return 0;
 }
+
+/*-----------------------------------------------
+      Print user turn options
+  -----------------------------------------------*/
+
+void print_turn_options(int player_id) {
+  printf("1)Interrogate another player\n");
+
+  if (PLAYERS[player_id].spy == 1) {
+    printf("2)Guess location\n");
+  } else {
+    printf("2)Guess spy\n");
+  }
+
+  printf("3)Show locations");
+}
+
+/*-----------------------------------------------
+      Print locations
+  -----------------------------------------------*/
+
+void print_locations() {
+  printf("1)Airplane        2)Amusement Park   3)Bank             4)Beach            5)Carnival\n");
+  printf("6)Casino          7)Circus Tent      8)Corporate Party  9)Crusader Army    10)Day Spa\n");
+  printf("11)Embassy        12)Hospital        13)Hotel           14)Military Base   15)Movie Studio\n");
+  printf("16)Nightclub      17)Oceanliner      18)Passenger Train 19)Pirate Ship     20)Polar Station\n");
+  printf("21)Police Station 22)Restaurant      23)School          24)Service Station 25)Space Station\n");
+  printf("26)Submarine      27)Supermarket     28)Theater         29)University      30)Zoo\n");
+}
