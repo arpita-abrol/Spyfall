@@ -34,7 +34,7 @@ int main() {
   sd = connect_to_server();
 
   select_username();
-  create_status_memory();
+  //create_status_memory();
 
   // int f = fork();
   //if (f == 0) {
@@ -185,7 +185,7 @@ void access_status_memory() {
 void communication_manager(int sd) {
   char buffer[100];
   
-  access_status_memory();
+  //access_status_memory();
    while (read( sd, buffer, sizeof(buffer) )) {
       printf("[SERVER %d] received: %s\n", getpid(), buffer );
       write( sd, buffer, sizeof(buffer));    
