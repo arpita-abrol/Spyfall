@@ -3,11 +3,11 @@
 
 #define MESSAGE_BUFFER_SIZE 1000
 
-struct user_data {
-	char usr_pid[8];
-	char username[8];
-	char role[8];
-	short spy;
+struct player_info {
+  int usrid;
+  char username[20];
+  char role[30];
+  int spy; 
 };
 
 void error_check( int i, char *s );

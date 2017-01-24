@@ -17,12 +17,6 @@ void process (char *s);
 
 int USERNAME_SIZE;
 
-struct player_info {
-  int usrid;
-  char username[20];
-  int spy; 
-};
-
 int num_players = 0;
 struct player_info players[7];
 

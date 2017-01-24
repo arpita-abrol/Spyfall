@@ -1,0 +1,243 @@
+Airplane 
+Spy
+1st Class Passenger
+Air Marshal
+Mechanic
+Coach Passenger
+Flight Attendant
+Co-Pilot
+Captain
+Bank
+Spy
+Armored Car Driver
+Bank Manager
+Loan Consultant
+Bank Robber
+Customer
+ecurity Guard
+Bank Teller
+Beach
+Spy
+Beach Bartender
+Kite Surfer
+Lifeguard
+Thief
+Beach Goer
+Beach Photographer
+Ice Cream Man
+Casino
+Spy
+Bartender
+Head of Security
+Bouncer
+Pit Boss
+Hustler
+Dealer
+Gambler
+Cathedral
+Spy
+Priest
+Begger
+Sinner
+Parishioner
+Tourist
+Deacon
+Choir Singer
+Circus Tent
+Spy
+Acrobat
+Animal Tamer
+Magician
+Audience Member
+Fire Eater
+Clown
+Juggler
+Corporate Party
+Spy
+Entertainer
+Manager
+Party Crasher
+Owner/CEO
+Admin Assistant
+Accountant
+Delivery Boy
+Crusader Army
+Spy
+Monk
+Imprisoned Arab
+Servant
+Bishop
+Squire
+Archer
+Knight
+Day Spa
+Spy
+Customer
+Stylist
+Massage Tech
+Manicurist
+Makeup Artist
+Dematologist
+Beautician
+Embassy
+Spy
+Security Guard
+Admin Assistant
+Ambassador
+Government Official
+Tourist
+Refugee
+Diplomat
+Hospital
+Spy
+Nurse
+Doctor
+Anesthesiologist
+Intern
+Patient
+Therapist
+Surgeon
+Hotel
+Spy
+Doorman
+Security Guard
+Hotel Manager
+Housekeeper
+Hotel Guest
+Bartender
+Valet
+Military Base
+Spy
+Deserter
+Colonel
+Medic
+Soldier
+Sniper
+Executive Officer
+Tank Commander
+Movie Studio
+Spy
+Stuntman
+Sound Engineer
+Cameraman
+Director
+Costume Artist
+Actor
+Producer
+Ocean Liner
+Spy
+Rich Passenger
+Cook
+Captain
+Bartender
+Musician
+Waiter
+Ship's Mechanic
+Passenger Train
+Spy
+Mechanic
+Border Patrol
+Chef
+Engineer
+Steward
+Ticket Taker
+Passenger
+Pirate Ship
+Spy
+Cook
+Sailor
+Slave
+Cannoneer
+Bound Prisoner
+Cabin Boy
+Pirate Captain
+Polar Station
+Spy
+Medic
+Geologist
+Expedition Leader
+Biologist
+Radioman
+Hydrologist
+Meteorologist
+Police Station
+Spy
+Detective
+Lawyer
+Journalist
+Forensic Scientist
+Evidence Archivist
+Patrol Officer
+Criminal
+Restaurant
+Spy
+Musician
+Customer
+Table Busser
+Host
+Head Chek
+Food Critic
+Server
+School
+Spy
+Mr. DW
+Student
+Principal
+Security Guard
+Janitor
+Lunch Lady
+Maintenance Man
+Service Station
+Spy
+Manager
+Tire Specialist
+Motorcyclist
+Car Owner
+Car Washer
+Diagnostic Tech
+Auto Mechanic
+Space Station
+Spy
+Engineer
+Alien
+Tourist
+Pilot
+Mission Commanger
+Scientist
+Doctor
+Submarine
+Spy
+Cook
+Captain
+Sonar Operator
+Weapons Technician
+Sailor
+Radioman
+Navigator
+Supermarket
+Spy
+Customer
+Cashier
+Butcher
+Janitor
+Produce Manager
+Food Sample Demo
+Shelf Stocker
+University
+Spy
+Graduate Student
+Professor
+Dean
+Psychologist
+Maintenance Man
+Student
+Advisor
+Theater
+Spy
+Coat Check
+Cue Card Prompter
+Ticket Office Cashier
+Theater Vistor
+Director
+Actor
+Crewman
