@@ -28,17 +28,13 @@ char LOCATIONS_ARR[30][20] = {"Airplane","Amusement Park","Bank","Beach","Carniv
 int main() {
 
   printf("Welcome to Spyfall\n");
-  //int loc = getLocation();
-  // char *location_chosen  = LOCATIONS_ARR[loc];
-  // printf("%s\n", location_chosen);
-  printf("Connect clients to begin\n");
+    printf("Connect clients to begin\n");
   
   int sd, connection;
   sd = server_setup();
 
-    while (NUM_PLAYERS < 8) {
-
-    connection = server_connect( sd );
+    while (NUM_PLAYERS < 1) {
+      connection = server_connect( sd );
     PLAYERS[NUM_PLAYERS].usrid = connection;
     NUM_PLAYERS++;
 
@@ -55,14 +51,12 @@ int main() {
     }
   }
 
-  printf("The max number of players has connected. The game will now begin.");
-  //printf("%s was selected as the location", LOCATIONS_ARR[loc]);
+  printf("The max number of players has connected. The game will now begin.\n");
+  int loc = rand() % 27;;
+  char *location_chosen  = LOCATIONS_ARR[loc];
+  printf("%s was selected as the location\n", LOCATIONS_ARR[loc]);
    
   return 0;
-}
-
-void establish_client_connection() {
-
 }
 
 void sub_server( int sd, int player_id ) {
